@@ -1,0 +1,244 @@
+/* Grundlæggende styling */
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fjern standardmargener og padding */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    padding-top: 40px; 
+}
+
+header {
+    background-color: #7a58e4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+    height: 80px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Logo styling */
+.nav-title .logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-btn {
+    z-index: 100; 
+}
+
+#nav-check:checked ~ .nav-btn label {
+    z-index: 101; 
+}
+
+
+.nav-btn label {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.nav-btn label span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-check:checked ~ .nav-btn label span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute; /* Sørger for, at linjerne overlapper */
+    top: 50%; /* Centrer lodret */
+    left: 50%; /* Centrer vandret */
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#nav-check:checked ~ .nav-btn label span:nth-child(2) {
+    opacity: 0; /* Skjuler midterlinjen */
+}
+
+#nav-check:checked ~ .nav-btn label span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+Når menuen er lukket, gendannes burger-ikonet
+#nav-check:not(:checked) ~ .nav-btn label span:nth-child(1),
+#nav-check:not(:checked) ~ .nav-btn label span:nth-child(3) {
+    transform: rotate(0) translate(0, 0);
+}
+
+#nav-check:not(:checked) ~ .nav-btn label span:nth-child(2) {
+    opacity: 1; /* Gør den midterste linje synlig igen */
+}
+
+/* Hide the checkbox */
+#nav-check {
+    display: none;
+}
+
+/* Navigation menu */
+.nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #7a58e4;
+    list-style: none;
+    z-index: 9;
+}
+
+/* Show menu when checked */
+#nav-check:checked ~ .nav-list {
+    display: flex;
+}
+
+.nav-list-item {
+    padding: 15px 20px;
+}
+
+.nav-list-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15.5px;
+}
+
+/* Undermenu styling */
+.nav-sub-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.nav-sub-menu-item{
+    padding: 5px 0;
+}
+
+.nav-sub-menu-item a{
+    font-size: 16px;
+}
+
+
+.nav-list-item.active .nav-sub-menu {
+    display: flex;
+}
+
+.nav-sub-menu a {
+    padding: 10px 0;
+}
+
+
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .nav-btn {
+        display: none; 
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        flex: 1;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-list-item {
+        text-align: left;
+        margin-left: 20px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-list-item a {
+        padding: 10px 15px;
+    }
+
+    .nav-sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #7a58e4;
+        padding: 0;
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .nav-list-item:hover .nav-sub-menu {
+        display: flex;
+    }
+
+    .nav-sub-menu:hover  {
+        display: flex;
+    }
+
+    /* Gør undermenupunkterne større og fed tekst på desktop */
+    .nav-sub-menu a {
+        font-size: 30px; 
+        font-weight: bold; 
+        padding: 12px 20px; 
+    }
+
+    .nav-sub-menu a:hover {
+        color:#201e4b; 
+    }
+
+    .nav-sub-menu-item{
+        padding: 10px;
+    }
+
+    /* Book nu knappen vises på desktop */
+    .booking-item {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Styling til "BOOK NU"-knap */
+    .booking-item a {
+        background-color: #201e4b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover-effekt til knappen */
+    .booking-item a:hover {
+        background-color: #3db180;
+    }
+}
