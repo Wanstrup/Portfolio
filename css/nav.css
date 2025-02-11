@@ -19,18 +19,7 @@ body {
     width: auto;
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #005F6A;
-    width: 100px;
-    border-radius: 5px;
-}
+
 
 .menu li {
     padding: 10px;
@@ -46,10 +35,6 @@ body {
     color: #005F6A;
 }
 
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-}
 
 @media (min-width: 600px) {
     .menu {
@@ -63,4 +48,8 @@ body {
     .menu-icon {
         display: none;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
