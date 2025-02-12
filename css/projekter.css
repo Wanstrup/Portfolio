@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr); /* 3 kolonner */
+    gap: 10px; /* Afstand mellem bokse */
+    width: 60%;
+    max-width: 500px;
+    margin: 50px auto; /* Centrerer containeren */
+    background-color: #f0f0f0; /* Lys baggrund for synlighed */
+    padding: 10px;
+margin-top: 100px;
+border: 3px solid #005F6A;
+    
+}
+.box {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #005F6A; /* Tilføjer kant */
+    aspect-ratio: 1 / 1; /* Gør boksene kvadratiske */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    aspect-ratio: 1/1;
+    width: 500px;
+
+}

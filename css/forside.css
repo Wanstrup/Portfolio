@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.boks {
+    width: 350px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.billede {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.over-tekst, .under-tekst {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
