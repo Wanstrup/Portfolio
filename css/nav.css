@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 60px;
+    padding-top: 350px;
     
 }
 
@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: bisque;
-    padding: 15px;
+    padding: 10px;
     color: white;
     border-bottom: 3px solid #005F6A;
     position: fixed;
@@ -32,7 +32,7 @@ body {
 .menu li {
     padding: 10px;
     text-align: center;
-    
+    margin-right: 10px;
 }
 
 .menu li a {

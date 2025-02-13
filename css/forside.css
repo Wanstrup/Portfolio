@@ -13,12 +13,14 @@ body {
     
 }
 
+
 .main-content {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 
 .boks {
@@ -30,6 +32,9 @@ body {
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin:50px 0;
+    border: 3px solid #005F6A;
+    
+  
 }
 
 .billede {
