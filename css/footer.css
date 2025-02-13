@@ -1,10 +1,10 @@
 footer {
     background-color: bisque;
-    color: black;
+    color: #005F6A;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
     border-top: 3px solid #005F6A;
+    width: 100%;
 }
 
 .footer-container h2 {
@@ -23,7 +23,7 @@ ul li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #005F6A;
     font-size: 1.1em;
 }
 

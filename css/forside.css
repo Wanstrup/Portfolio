@@ -1,21 +1,35 @@
-body {
+html, body {
+    height: 100%;
+    margin: 0;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    width: 100%;
 }
 
 .boks {
     width: 350px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    overflow: hidden;
     text-align: center;
     padding: 10px;
     background-color: #f9f9f9;
-    margin-top: 100px;
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin:50px 0;
 }
 
 .billede {
@@ -28,4 +42,10 @@ body {
     font-size: 16px;
     color: #333;
     margin: 10px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
