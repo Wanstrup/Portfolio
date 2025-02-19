@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 350px;
+    padding-top: 80px;
     
 }
 
@@ -9,10 +9,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: bisque;
+    background: #EFEFEF;
     padding: 10px;
     color: white;
-    border-bottom: 3px solid #005F6A;
+    border-bottom: 3px solid #3454D1;
     position: fixed;
     top: 0; 
     left: 0;
@@ -41,7 +41,7 @@ body {
 }
 
 .menu li:hover {
-    color: #005F6A;
+    color: #3454D1;
 }
 
 

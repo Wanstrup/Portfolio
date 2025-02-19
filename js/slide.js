@@ -1,27 +1,29 @@
-let slideIndex = 0;
-showSlides(); // Start med at vise den første slide
+let currentIndex = 0;
 
-// Funktion til at vise de slides
-function showSlides() {
-    let slides = document.querySelectorAll(".slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; // Skjul alle slides
-    }
+function changeActive(direction) {
+    const boxes = document.querySelectorAll(".box");
 
-    // Sørg for, at slideIndex ikke går uden for rækkevidde
-    if (slideIndex >= slides.length) {
-        slideIndex = 0; // Hvis vi er på sidste slide, gå tilbage til første slide
-    }
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1; // Hvis vi er før første slide, gå til sidste slide
-    }
+    // Opdater index
+    currentIndex += direction;
 
-    // Vis den aktuelle slide
-    slides[slideIndex].style.display = "block";
+    // Sikrer, at vi holder os indenfor grænserne
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex >= boxes.length) currentIndex = boxes.length - 1;
+
+    // Fjern "active" fra alle kasser
+    boxes.forEach(box => box.classList.remove("active"));
+
+    // Tilføj "active" til den valgte kasse
+    boxes[currentIndex].classList.add("active");
+
+    // Opdater pile synlighed
+    document.querySelector(".left-arrow").classList.toggle("hidden", currentIndex === 0);
+    document.querySelector(".right-arrow").classList.toggle("hidden", currentIndex === boxes.length - 1);
 }
 
-// Funktion til at navigere frem og tilbage i slides
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides(); // Vis den opdaterede slide
-}
+// Skjul venstre pil fra start
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".left-arrow").classList.add("hidden");
+});
+
+

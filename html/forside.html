@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/forside.css">
     <script src="/js/script.js"></script>
+    <script src="/js/slide.js"></script>
+    
 </head>
+
 <body>
+
     <nav class="navbar">
         <div class="logo">
             <a href="/html/forside.html">
@@ -24,29 +28,63 @@
         </ul>
     </nav>
 
-<main>
+    <main>
 
+        <!-- Forside billede -->
+        <div class="image-container">
+            <img src="/img/forsidee.png" alt="Forside billede">
+        </div>
 
-    <div class="boks">
-        <h1 class="over-tekst">VILLADS WANSTRUP</h1>
-        <img src="/img/Villads 1.png" alt="Billede" class="billede">
-        <p class="under-tekst">WEBUDVIKLER MED GRAFISK FLAIR</p>
-    </div>
+        <!-- Scroll ned sektion -->
+        <div class="scroll-section">
+            <p>Scroll for mere</p>
+            <div class="arrow"></div>
+        </div>
 
+        <!-- Om mig sektion -->
+        <section id="om-mig" class="about-me">
+            <h2>OM MIG</h2>
+            <img src="/img/Villads.jpg" alt="Billede af mig" class="profile-img">
+            <p>Jeg hedder Villads og jeg brænder for webudvikling.</p>
+            <p>Jeg har arbejdet med programmering i flere år.</p>
+            <p>Min mission er at skabe innovative digitale løsninger.</p>
+            <p>Når jeg ikke arbejder, elsker jeg at spille guitar.</p>
+            <a href="/html/ommig.html" class="btn">Læs mere om mig</a>
+        </section>
 
-    <button id="backToTop" onclick="scrollToTop()">↑</button>
-</main>
+        <section class="container">
+            <button class="arrow left-arrow hidden" onclick="changeActive(-1)">
+                <span class="material-icons">chevron_left</span>
+            </button>
+        
+            <div class="box-wrapper">
+                <div class="box active">NIPPON</div>
+                <div class="box">SKOR</div>
+                <div class="box">ZERO BUZZ BREW</div>
+            </div>
+        
+            <button class="arrow right-arrow" onclick="changeActive(1)">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </section>
+        
+        <!-- Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <a href="/html/projekter.html" class="btnn">Se Alle</a>
 
-<footer id="kontakt">
-    <div class="footer-container">
-        <h2>Kontakt mig</h2>
-        <ul>
-            <li><a href="mailto:Villads@wanstrup.com">MAIL</a></li>
-            <li><a href="https://www.linkedin.com/in/dinlinkedinprofil" target="_blank">LINKEDIN</a></li>
-        </ul>
-    </div>
-</footer>
+    </main>
 
+    <footer id="kontakt">
+        <div class="footer-container">
+            <h2>Kontakt mig</h2>
+            <ul>
+                <li><a href="mailto:Villads@wanstrup.com">MAIL</a></li>
+                <li><a href="https://www.linkedin.com/in/villads-wanstrup-15251434b/" target="_blank">LINKEDIN</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 </html>
+

@@ -1,9 +1,9 @@
 footer {
-    background-color: bisque;
-    color: #005F6A;
+    background-color: #EFEFEF;
+    color: #3454D1;
     padding: 20px;
     text-align: center;
-    border-top: 3px solid #005F6A;
+    border-top: 3px solid #3454D1;
     width: 100%;
 }
 
@@ -23,10 +23,10 @@ ul li {
 
 a {
     text-decoration: none;
-    color: #005F6A;
+    color: #3454D1;
     font-size: 1.1em;
 }
 
 a:hover {
-    color: #005F6A; 
+    color: #3454D1; 
 }
