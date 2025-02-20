@@ -40,7 +40,8 @@ body {
 
 h1{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
+    color: #3454D1;
 }
 
 .flip-card-inner {
@@ -112,7 +113,7 @@ h1{
 }
 
 .box:nth-child(3) .flip-card-front {
-    background-color: lightyellow;
+    background-color: #ffc107;
 }
 
 .box:nth-child(1) .flip-card-back {
@@ -126,3 +127,22 @@ h1{
 .box:nth-child(3) .flip-card-back {
     background-color: #efefef;
 }
+
+@media (max-width: 768px) {
+    .flip-card-back p {
+        font-size: 14px; /* Gør teksten mindre på mobil */
+        padding: 15px; /* Tilføjer luft omkring teksten */
+        line-height: 1.4; /* Forbedrer læsbarhed */
+        text-align: center; /* Centrerer teksten */
+    }
+
+    .flip-card-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Giver ekstra luft inde i bagsiden */
+        text-align: center;
+    }
+}
+

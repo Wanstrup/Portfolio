@@ -20,18 +20,18 @@ body {
     padding: 20px;
     
     
+    
 }
 
 .box {
     width: 60%;
-    
+
 }
 
 .image {
     width: 100%;
     height: auto;
     border-radius: 0;
-    
     
 }
 
@@ -75,6 +75,7 @@ h2{
     justify-content: center;
     gap: 50px; /* Afstand mellem de to bokse */
     margin-top: 30px;
+    
 }
 
 .text-box {
@@ -119,4 +120,62 @@ h2{
     width: 60px; /* Ensartet størrelse */
     height: auto;
     border-radius: 8px;
+    
 }
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Ændrer layout til en kolonne */
+        text-align: center; /* Centrerer teksten */
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%; /* Fuld bredde på små skærme */
+    }
+
+    .text-container {
+        flex-direction: column; /* Stabler boksene */
+        gap: 20px; /* Mindre mellemrum på mobil */
+        align-items: center;
+    }
+
+    .text-box {
+        width: 90%; /* Giver mere plads på små skærme */
+        margin-top: 50px; /* Mindsker afstand */
+        margin-bottom: 50px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Beholder 2 kolonner */
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .image-grid img {
+        width: 50px; /* Mindre billeder på mobil */
+    }
+
+    h1, h2 {
+        font-size: 22px; /* Mindsker skriftstørrelsen */
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .pdf-button {
+        width: 80%; /* Gør knappen bredere på mobil */
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    image {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+

@@ -62,3 +62,12 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+@media (max-width: 600px) {
+    .menu {
+        display: flex; /* Beholder row layout */
+        flex-direction: row; 
+        justify-content: space-around; /* Gør det pænere på små skærme */
+        width: 100%;
+    }
+}
