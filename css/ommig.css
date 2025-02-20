@@ -7,8 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fefefe;
     padding-top: 80px;
+    
+    
 }
 
 .container {
@@ -20,7 +22,7 @@ body {
 }
 
 .box {
-    width: 45%;
+    width: 60%;
     
 }
 
@@ -38,10 +40,81 @@ p {
 
 h1 {
     margin-bottom: 20px;
-    color: #005F6A;
+    color: #3454D1;
 }
 
 h2{
     text-align: center;
-    color: #005F6A;
+    color: #3454D1;
+}
+
+.pdf-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto; /* Auto centrerer den vandret */
+    padding: 15px 30px;
+    background-color: #3454D1;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pdf-button:hover {
+    background-color: #3454D1;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Afstand mellem de to bokse */
+    margin-top: 30px;
+}
+
+.text-box {
+    border: 3px solid #3454D1;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 40%;
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-box h3 {
+    color: #3454D1;
+    margin-bottom: 10px;
+}
+
+.text-box ul {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 20px; /* Giver lidt afstand fra kanten */
+    text-align: left; /* Venstrejusteret for bedre læsbarhed */
+}
+
+.text-box ul li {
+    margin-bottom: 8px; /* Giver lidt luft mellem punkterne */
+    font-size: 16px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+    grid-template-rows: repeat(3, auto); /* 3 rækker */
+    gap: 15px; /* Afstand mellem billederne */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.image-grid img {
+    width: 100px; /* Juster størrelsen på billederne */
+    height: auto;
+    border-radius: 8px;
 }
