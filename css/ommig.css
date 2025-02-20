@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fefefe;
+    background-color: #efefef;
     padding-top: 80px;
     
     
@@ -19,6 +19,7 @@ body {
     align-items: center;
     padding: 20px;
     
+    
 }
 
 .box {
@@ -29,7 +30,8 @@ body {
 .image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 0;
+    
     
 }
 
@@ -57,7 +59,7 @@ h2{
     color: white;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 8px;
+    border-radius: 0;
     transition: background 0.3s;
     border: none;
     cursor: pointer;
@@ -81,8 +83,8 @@ h2{
     margin-bottom: 100px;
     width: 40%;
     padding: 20px;
-    background: #fefefe;
-    border-radius: 8px;
+    background: #efefef;
+    border-radius: 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -107,14 +109,14 @@ h2{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
     grid-template-rows: repeat(3, auto); /* 3 rækker */
-    gap: 15px; /* Afstand mellem billederne */
+    gap: 15px; /* Afstand mellem logoerne */
     justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
 
 .image-grid img {
-    width: 100px; /* Juster størrelsen på billederne */
+    width: 60px; /* Ensartet størrelse */
     height: auto;
     border-radius: 8px;
 }
